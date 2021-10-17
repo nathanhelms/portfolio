@@ -186,27 +186,48 @@ header nav ul li a:hover {
 
 /* contact me section */
 
-.contact-me-text {
+.contact-me-container, .contact-me-text {
     padding-bottom: 30px;
+}
 
+.contact-links {
+    width: 280px;
 }
 
 .contact-links ul {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    margin-left: -40px;
+    
     justify-content: space-between;
 }
 
 .contact-links ul li {
     background-color: var(--crayolared);
+    box-shadow: 5px 5px var(--oxfordblue);
     display: flex;
-    width: 150px;
-
     padding: 15px;
     border-radius: 15px;
+    text-align: center;
+    margin-bottom: 15px;
     
-
 }
+
+.contact-links ul li a, .contact-links ul li p {
+    color: var(--mintcream);
+    text-decoration: none;
+}
+
+
+.footer-img  {
+    float: right;
+    position: relative;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 260px
+}
+
 
 
 
