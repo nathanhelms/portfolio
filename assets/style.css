@@ -1,41 +1,66 @@
 
-:root {
-    --primary-color: #191a3f;
-    --secondary-color: orangered;
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
 
+article {
+    padding: 210px 7% 0px 7%;
+}
+
+:root {
+    --oxfordblue: #011936FF;
+    --crayolared: #ED254EFF;
+    --naplesyellow: #F9DC5CFF;
+    --mintcream: #F4FFFDFF;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2.5px;
+    background-image: linear-gradient( white 50%, var(--naplesyellow));
 }
 
 header {
-    padding: 15px 40px;
-    justify-content: space-between;
+    padding: 50px 50px;
     display: flex;
     flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 10%);
+    z-index: 9998;
+    background-image: url(./images/header-bg.png);
+    background-attachment: fixed;
+}
+
+header h1 a {
+    color: var(--mintcream)
 }
 
 header a {
     text-decoration: none;
 }
 
-header h1 a {
-    position: fixed;
+header h1 {
     z-index: 9999;
-    color:white;
     font-weight: lighter;
-    background-color: var(--primary-color);
-    top: 1;
+    background-color: var(--oxfordblue);
     padding: 20px;
-    box-shadow: 5px 5px orangered;
+    box-shadow: 5px 5px var(--naplesyellow);
+    border-radius: 15px;
+}
+
+header nav {
+    text-align: center;
 }
 
 /* HOW DO I MAKE THIS A GRADIENT */
 
-header h1 a:hover {
-   color: orangered;
+header h1:hover {
+   color: var(--crayolared);
    box-shadow: 5px 5px;
 }
 
@@ -45,4 +70,231 @@ header nav ul {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  width: 100%;
+  height: 50px;
 }
+
+header nav ul li {
+    margin-left: 15px;
+    margin-right: 10px
+}
+
+header nav ul li a {
+    color: var(--oxfordblue);
+    font-size: 20px
+}
+
+header nav ul li a:hover {
+    color: var(--crayolared)
+}
+
+/* about me section */
+
+.about-me-container {
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    height: 220px;
+
+}
+
+#about-me img {
+    height: 180px;
+    display: block;
+    box-shadow: 5px 5px var(--naplesyellow);
+    border-radius: 15px;
+}
+
+#about-me img:hover {
+    color: var(--crayolared);
+    box-shadow: 5px 5px;
+ }
+
+.about-me-text {
+    padding: 0px 0px 30px 30px;
+    word-wrap: break-word;
+    width: auto;
+  
+}
+
+/* work section */
+
+.work-container {
+    display: grid;
+    margin: auto;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    
+ 
+}
+
+.work-text {
+    text-align: left;
+    word-wrap: break-word;
+    width: 100%;
+
+}
+
+.flex-grid {
+    display: flex;
+ 
+    flex-wrap: wrap;
+    padding-top: 30px;
+
+}
+
+.col {
+
+    flex-wrap: wrap;
+    border-radius: 15px;
+    box-shadow: 5px 5px var(--crayolared);
+    background-color: var(--oxfordblue);
+    width: 280px;
+    margin: 10px;
+    height: 350px;
+    overflow: hidden;
+  
+
+    
+}
+
+.col-b .col-c {
+    padding: 3px;
+}
+
+.col img {
+    height: 168.5px;
+    width: 250.5px;
+    border-radius: 5px;
+    margin: 15px;
+    background-color: white;
+    object-fit: cover;
+}
+
+.col h3, .col p {
+    color: var(--mintcream);
+    font-weight: lighter;
+    text-align: center;
+}
+
+.col p {
+    padding: 15px;
+    font-size: 11px;
+    opacity: 75%;
+}
+
+
+/* contact me section */
+
+.contact-me-text {
+    padding-bottom: 30px;
+
+}
+
+.contact-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-links ul li {
+    background-color: var(--crayolared);
+    display: flex;
+    width: 150px;
+
+    padding: 15px;
+    border-radius: 15px;
+    
+
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+
+@media screen and (max-width: 1070px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      background-position: center;
+      z-index: 9999;
+    }
+  
+    header nav {
+        padding: 15px 33px 15px 0px;
+        align-items: center;
+    }
+
+    .about-me-container {
+        padding-top: 50px;
+
+    }
+
+    .about-me-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 625px) {
+
+    header {
+        justify-content: space-between;
+        padding: 20px
+        
+    }
+    
+    header h1 {
+      height: 140px;
+      width: 140px;
+      font-size: 20px;
+    }
+
+    header h1 a {
+        line-height: 33px;
+    }
+
+
+    header nav {
+        height: 140px;
+        
+
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: unset;
+        text-align: right;  
+        height: 100%; 
+    }
+
+    header nav ul li {
+        margin: 0px;
+        line-height: 0px;
+        text-align: right;
+
+        
+    }
+
+    header nav ul li a {
+        font-size: 18px;
+
+    }
+
+    .about-me-text {
+        padding-top: 30px;
+        width: 90%;
+    }
+}
+/* mix-blent-mode */
