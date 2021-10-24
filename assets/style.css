@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-article {
-    padding: 210px 7% 0px 7%;
-}
+
 
 :root {
     --oxfordblue: #011936FF;
@@ -19,6 +17,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2.5px;
     background-image: linear-gradient( white 50%, var(--naplesyellow));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 header {
@@ -57,6 +58,10 @@ header nav {
     text-align: center;
 }
 
+article {
+    padding: 210px 7% 0px 7%;
+}
+
 /* HOW DO I MAKE THIS A GRADIENT */
 
 header h1:hover {
@@ -93,9 +98,7 @@ header nav ul li a:hover {
 .about-me-container {
     margin: auto;
     display: flex;
-    align-items: flex-start;
-    height: 220px;
-
+    padding-bottom: 30px;
 }
 
 #about-me img {
@@ -123,7 +126,7 @@ header nav ul li a:hover {
     display: grid;
     margin: auto;
     flex-wrap: wrap;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 
@@ -139,7 +142,7 @@ header nav ul li a:hover {
     display: flex;
  
     flex-wrap: wrap;
-    padding-top: 30px;
+    padding-top: 20px;
 
 }
 
@@ -277,24 +280,56 @@ header nav ul li a:hover {
     }
   
     header nav {
-        padding: 15px 33px 15px 0px;
+        padding: 15px 0px 15px 0px;
         align-items: center;
     }
 
-    #about-me {
-        display: flex;
-        flex-wrap: wrap;
+    .profile-img {
+        margin: auto;
     }
 
- 
+    .about-me-container {
+        flex-direction: column;
+        height: 100%;
+    
 
+    }
 
+    article {
+        padding-top: 30px;
+        justify-content: center;
+    }
+
+    .flex-grid {
+        justify-content: center;
+    }
    
+    .about-me-text {
+        padding: 30px 0px 0px 0px
+    }
 
     .contact-me-container {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
    
+    }
+
+    .contact-links {
+        width: 100%;
+    }
+
+    .contact-me-text {
+        margin: auto;
+    }
+
+    .about-me-text {
+        margin: auto;
+        text-align: center;
+    }
+
+    .work-text {
+        text-align: center;
     }
 }
 
@@ -341,8 +376,12 @@ header nav ul li a:hover {
         
     }
 
+    .flex-grid {
+        margin: 0px;
+    }
+
     header nav ul li a {
-        font-size: 18px;
+        font-size: 15px;
 
     }
 
@@ -351,8 +390,42 @@ header nav ul li a:hover {
         width: 90%;
     }
 
-    .article {
-        padding: 100px 7% 0px 7%
+    article {
+        padding: 30px 7% 0px 7%
+    }
+
+    .contact-links ul {
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        justify-content: center;
+        margin: auto;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .contact-links {
+        width: 100%;
     }
 }
-/* mix-blent-mode */
+
+
+/* MEDIA QUERY FOR SMALL PHONES */
+@media screen and (max-width: 330px) {
+
+    header nav ul li a {
+        font-size: 11.5px
+    }
+
+    article {
+        padding: 0px
+    }
+
+    .about-me-container {
+        padding-top: 30px
+    }
+
+
+
+
+}
